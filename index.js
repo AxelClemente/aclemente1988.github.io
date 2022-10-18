@@ -3,6 +3,8 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth-500;
 canvas.heigth = window.innerHeight;
 
+console.log(canvas.width)
+
 let pumpkinArray = [];
 const numberOfPumpkin = 20;
 
@@ -28,7 +30,7 @@ init();
 
 
 function animate(){
-    ctx.clearRect(0, 0, 2000, 1050);
+    ctx.clearRect(0, 0, canvas.width, canvas.heigth);
     player.drawMonster();
     //lollypop.drawCandy();
     
@@ -43,7 +45,7 @@ function animate(){
         particleArray[i].drawParticles();
     }
     
-
+    
 
     requestAnimationFrame(animate);
 }
