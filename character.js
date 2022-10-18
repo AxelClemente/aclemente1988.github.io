@@ -41,20 +41,20 @@ window.addEventListener('keydown', (e) => {
       case 37:
         player.x -= 40;
         if (player.x < 0) {
-          player.x = 3000;
+          player.x = 2500;
         }
         console.log('move left');
         break;
       case 39:
         player.x += 40;
-        if (player.x > 3000) {
-          player.x = 3000;
+        if (player.x > 2500) {
+          player.x = 2500;
         }
         break;
         case 32:
         player.x -= 180;
-        if (player.x > 2850) {
-          player.x = 2850;
+        if (player.x > 2500) {
+          player.x = 2500;
         }
         break;
     }
