@@ -46,4 +46,6 @@ class Pumpkins{
 
     bottom(){ return this.y+this.height}
 
+    
+
 }

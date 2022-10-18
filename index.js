@@ -1,6 +1,6 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
+canvas.width = window.innerWidth/1.2;
 canvas.heigth = window.innerHeight;
 
 console.log(canvas.width)
@@ -28,11 +28,20 @@ function initParticle(){
 initParticle();
 init();
 
+function checkGameOver(){
+    const crashed = pumpkinArray.some(function(obstacle){
+        return player.crashWith(obstacle);
+    })
+  
+    if(crashed){
+      cancelAnimationFrame(animate);
+    }
+  }
 
 function animate(){
     ctx.clearRect(0, 0, canvas.width, canvas.heigth);
     player.drawMonster();
-    //lollypop.drawCandy();
+    checkGameOver()
     
 
     for (let i=0; i<pumpkinArray.length; i++){
