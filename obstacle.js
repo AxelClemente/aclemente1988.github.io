@@ -28,14 +28,13 @@ class Pumpkins{
         }
         this.y += this.speed;
     }
-    // init(){
-    //     for (let i =0; i<numberOfPumpkin; i++){
-    //         pumpkinArray.push(new Pumpkins());
+    // handlePumpkins(){
+    //     if (pumpkinArray>canvas.height){
+    //         for (let i=0; i< pumpkinArray.length; i++){
+    //             pumpkinArray.pop(particleArray[i]);
+    //         }
     //     }
-        
     // }
-
-    // init();
 
     // collision detection
     left(){ return this.x}
