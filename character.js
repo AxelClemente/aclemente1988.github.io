@@ -6,6 +6,8 @@ class Monster {
       this.height = 510/3;
       this.monster = new Image();
       this.monster.src = 'Images/monster.png'
+      this.sound = new Audio();
+      this.sound.src = 'Audio/steps in wood floor.wav';
     }
   
     drawMonster() {
