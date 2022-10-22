@@ -1,0 +1,107 @@
+/* canvas{
+    border: 1px solid rebeccapurple;
+    background-color: white;
+}
+  
+body {
+    padding: 0;
+    text-align: center;
+}
+  
+.game-intro {
+    float: left;
+    padding: 0% 10%;
+}
+  
+.game-intro p {
+    font-size: 18px;
+    font-family: "Verdana"
+}
+  
+.logo-img {
+    width: 350px;
+}
+  
+.arrows-img {
+    width: 150px;
+}
+  
+body button {
+    font-size: 30px;
+    background-color: #870007;
+    color: #fff;
+    padding: 20px 40px;
+    border: 0;
+    box-shadow: 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+  
+#game-board {
+    float: left;
+    padding: 20px 0px;
+} */
+
+
+canvas{
+    
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-image: url('Images/Diseño sin título (1).png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 10px solid #ffa500;
+}
+
+body {
+    padding: 0;
+    text-align: center;
+}
+
+
+.game-intro p {
+    align-items: center;
+    font-size: 58px;
+    font-family: 'Creepster';
+    color: rgb(247, 176, 44);
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+  
+.arrows-img {
+    width: 150px;
+}
+  
+body button {
+    
+    background-color: #ffa500;
+    color: rgb(206, 18, 18);
+    padding: 15px 30px;
+    border: 0;
+    box-shadow: 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-family:'Creepster';
+    margin-top: 20px;
+    
+}
+
+body{
+    background-color: black;
+}
+
+.game-intro img{
+    width: 1500px;
+    height: auto; 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 750px;
+    border: 10px solid white;
+}
