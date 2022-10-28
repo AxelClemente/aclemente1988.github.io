@@ -4,10 +4,12 @@ canvas.width = window.innerWidth/1.2;
 canvas.heigth = window.innerHeight;
 let frame = 0;
 
+
 console.log(canvas.width)
 // Arrays
 let pumpkinArray = [];
 let particleArray = [];
+let myObstacles = [];
 
 // Frequency or game difficulty
 const numberOfPumpkin = 10;
@@ -36,45 +38,83 @@ function initParticle(){
 }
 initParticle();
 
+// checkGameOver = () => {
+//     const crashed = pumpkinArray.some((e)=>{
+//         return player.crashWith(e);
+//       })
+    
+//       if(crashed){
+//        cancelAnimationFrame(animationId);
+//     }
+//   };
+
 
 // Logic for player colliding with obstacles                NOT WORKING!
-function checkGameOver(){
-    const crashed = pumpkinArray.some((obstacle) =>{
-        return player.crashWith(obstacle);
-    })
-  
-    if(crashed){
-        
-        cancelAnimationFrame(animate)
-        
-    }
+// function checkGameOver(){
+    
 
+    // pumpkinArray.forEach((obstacle) =>{
+        
+        
+    //     if (player.crashWith(obstacle)){
+    //         // cancelAnimationFrame(animate)
+    //         console.log('crash')
+    //     }
+        
+    // })
+
+
+        
+        //     console.log('crash')
+        //   //myGameArea.clear();
+        // }
+    
+      
+  
+    // if(crash){
+        
+    //     cancelAnimationFrame(animate)
+        
+    // }
    
-}
+// }
 // Logic for player successfully not colliding with obstacles        NOT WORKING!
-function gameOver(){
-    if (frame===10){
-        cancelAnimationFrame(animate)
-    }
-}
+// function gameOver(){
+//     if (frame===10){
+//         cancelAnimationFrame(animate)
+//     }
+// }
+
+// function handleCandys(){
+//     for (let i=0; i< particleArray)
+// }
 
 
 function animate(){
     frame++;
     ctx.clearRect(0, 0, canvas.width, canvas.heigth);
     player.drawMonster();
-    checkGameOver();
+    // checkGameOver();
     score();
    
-    for (let i=0; i<pumpkinArray.length; i++){
-        pumpkinArray[i].update();
-        pumpkinArray[i].drawPumpkin();
-    }
+    // for (let i=0; i<pumpkinArray.length; i++){
+    //     pumpkinArray[i].update();
+    //     pumpkinArray[i].drawPumpkin();
+    // }
 
-    for (let i=0; i<particleArray.length; i++){
-        particleArray[i].update();
-        particleArray[i].drawParticles();
-    }
+    // for (let i=0; i<particleArray.length; i++){
+    //     particleArray[i].update();
+    //     particleArray[i].drawParticles();
+    // }
+
+    for (i = 0; i < myObstacles.length; i++) {
+        myObstacles[i].y += 20;
+        myObstacles[i].update();
+        myObstacles[i].drawRectanlges();
+    
+    }  
+    
+    console.log()
 
     requestAnimationFrame(animate);
 }

@@ -7,7 +7,7 @@ class Monster {
       this.monster = new Image();
       this.monster.src = 'Images/monster.png'
       this.sound = new Audio();
-      this.sound.src = 'Audio/steps in wood floor.wav';
+      
     }
   
     drawMonster() {
@@ -29,12 +29,17 @@ class Monster {
     bottom(){ 
         return this.y+this.height}
     
-    crashWith(object){
-        return !(this.bottom() < object.top() || this.top() > object.bottom() || this.right() < object.left() || this.left() > object.right());
-    }
+    // crashWith(object){
+    //     console.log(this.y); 
+    //     console.log(this.top() > object.bottom)
+    //     return !( this.top() > object.bottom );
+    // }
+
+    
     
 
 }
+
 
 const player = new Monster();
 
